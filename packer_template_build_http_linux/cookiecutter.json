@@ -1,0 +1,9 @@
+{
+    "build_name": "",
+    "builds_directory": "",
+    "description": "",
+    "codename": "{{ cookiecutter.build_name }}",
+    "other_comments": "",
+    "ssh_user": "reap2sow1",
+    "ssh_pass": "Passw0rd!"
+}

@@ -1,0 +1,22 @@
+{
+    "_DESCRIPTION": "{{ cookiecutter.description }}",
+    "_CODENAME": "{{ cookiecutter.codename }}",
+    "_OTHER_COMMENTS": "{{ cookiecutter.other_comments }}",
+    "variables": {
+        "hostname": "",
+        "ssh_user": "{{ cookiecutter.ssh_user }}",
+        "ssh_pass": "{{ cookiecutter.ssh_pass }}",
+        "shutdown_command": "sudo -S shutdown -h now",
+        "output_directory": "{{ cookiecutter.builds_directory }}"
+    },
+    "builders": [
+        {}
+    ],
+    "provisioners": [{
+        "type": "shell",
+        "script": "./scripts/shell-provisioner.sh",
+        "environment_vars": [
+            "SSH_PASSWORD={{ '{{' }}user `ssh_pass`{{ '}}' }}"
+        ]
+    }]
+}
