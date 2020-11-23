@@ -6,6 +6,8 @@ import sys
 
 # Local Application Imports
 
+# returning a non-zero error code will cause
+# project generation to stop and deletion of said project directory
 ERROR_PREFIX = "Error:"
 
 build_name = "{{ cookiecutter.build_name }}"
